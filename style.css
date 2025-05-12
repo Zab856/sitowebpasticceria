@@ -1,0 +1,318 @@
+:root {
+  --clr-primario: rgb(166, 70, 50); /* Terracotta */
+  --clr-shadowPrimario: rgba(166, 70, 50, 0.6); /* Terracotta shadow */
+
+  --clr-secondario: rgb(245, 214, 177); /* Light orange */
+  --clr-accentoScuro: rgb(97, 42, 30); /* Marrone bruciato */
+
+  --clr-sfondoNeutro: rgb(240, 234, 230); /* Tortora chiaro */
+  --clr-sezioneSoft: rgb(248, 243, 241); /* Grigio rosato chiarissimo */
+
+  --clr-caratteri: rgb(20, 20, 20); /* Night */
+}
+* {
+  box-sizing: border-box;
+  line-height: calc(1em + 0.5rem);
+  margin: 0;
+  padding: 0;
+}
+html {font-size: 62.5%;}
+body {
+  font-family: 'Merriweather Sans', sans-serif;
+  font-size: 1.6rem;
+  overflow-x: hidden;
+}
+img, picture, video, canvas, svg {
+  user-select: none;
+  display: block;
+  height: auto;
+}
+
+/* scrollbar */
+::-webkit-scrollbar {
+  width: 1rem;
+}
+::-webkit-scrollbar-thumb {
+  background: var(--clr-primario);
+}
+::-webkit-scrollbar-track {
+  background-color: var(--clr-sfondoNeutro);
+}
+
+
+/* font sizes */
+h1 { font-size: 5rem;}
+h2 { font-size: 3.8rem;}
+h3 { font-size: 2.8rem;}
+p { font-size: 2rem;}
+
+
+/* header */ /* header */
+header {
+  background-color: var(--clr-primario);
+  padding: 3rem;
+
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+header h1 { color: var(--clr-secondario);}
+header img {
+  height: auto;
+  width: 20rem;
+}
+.social-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+}
+header .social-section a img {
+  height: auto;
+  width: 3.3rem;
+}
+
+
+/* i nostri prodotti */ /* i nostri prodotti */
+.i-nostri-prodotti {
+  background-color: var(--clr-sfondoNeutro);
+}
+.i-nostri-prodotti-header {
+  padding: 3.5rem;
+  text-align: center;
+}
+.i-nostri-prodotti-header h2 { 
+  color: var(--clr-primario);
+  font-style: italic;
+}
+.i-nostri-prodotti-main {
+  position: relative;
+}
+.slide-track {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 1rem;
+  width: fit-content;
+  margin: 0 auto;
+
+  position: relative;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+.slide {
+  background-color: var(--clr-sezioneSoft);
+  padding: 3rem;
+  border-radius: 1rem;
+  box-shadow: 0 4px 16px -6px var(--clr-shadowPrimario);
+
+  display: flex;
+  column-gap: 2rem;
+
+  margin: 0 3rem 3rem;
+}
+.slide img {
+  height: auto;
+  width: 45rem;
+  box-shadow: 0 2px 8px -6px var(--clr-shadowPrimario);
+  border-radius: 1rem;
+}
+.slide-text {
+  width: 60ch;
+  padding: 3rem;
+}
+.slide-text h3, .slide-text p { color: var(--clr-caratteri);}
+
+.prev-btn, .next-btn {
+  outline: none;
+  background-color: var(--clr-primario);
+  opacity: 0.7;
+  border: none;
+  border-radius: .4rem;
+  padding: .5rem 0;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  z-index: 99;
+  top: 40%;
+  /* transform: translateY(-50%); */
+}
+.prev-btn { left: 2rem;}
+.next-btn { right: 2rem}
+.prev-btn span, .next-btn span {
+  color: var(--clr-sfondoNeutro);
+  font-size: 3.6rem;
+}
+.prev-btn:hover, .next-btn:hover { opacity: 0.8;}
+.prev-btn:active, .next-btn:active { opacity: 1;}
+
+
+/* call to action */ /* call to action */
+.call-to-action-header {
+  background-color: var(--clr-primario);
+  padding: 3.5rem;
+  text-align: center;
+}
+.call-to-action-header h2 { color: var(--clr-secondario);}
+.call-to-action-main {
+  height: 42rem;
+}
+.call-to-action-main iframe {
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+
+/* chi siamo e servizi aggiuntivi */ /* chi siamo e servizi aggiuntivi */
+.chi-siamo-e-servizi-aggiuntivi {
+  background-color: var(--clr-sfondoNeutro);
+  padding: 4rem;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  row-gap: 4rem;
+}
+.chi-siamo {
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+  column-gap: 2rem;
+}
+.chi-siamo-text, .servizi-aggiuntivi-text {
+  background-color: var(--clr-sezioneSoft);
+  padding: 3rem;
+  border-radius: 1rem;
+
+  box-shadow: 0 4px 16px -6px var(--clr-shadowPrimario);
+}
+.chi-siamo img {
+  border-radius: 1rem;
+  height: 38rem;
+  width: auto;
+  box-shadow: 0 4px 16px -6px var(--clr-shadowPrimario);
+}
+
+.servizi-aggiuntivi {
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  column-gap: 2rem;
+}
+.doppio-verticale {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  row-gap: 2rem;
+}
+
+
+/* footer */ /* footer */
+footer {
+  background-color: var(--clr-accentoScuro);
+  padding: 3rem;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+footer .social-section { display: none;}
+footer .social-section a img {
+  height: auto;
+  width: 2.5rem;
+}
+footer h1 {
+  color: var(--clr-secondario);
+  font-style: italic;
+}
+footer p { color: var(--clr-secondario);}
+
+
+/* - layout responsive - */ /* - layout responsive - */
+
+/* laptop standard */
+@media (max-width: 1440px) {
+  h1 { font-size: 4.5rem;}
+  h2 { font-size: 3.4rem;}
+  h3 { font-size: 2.6rem;}
+  p { font-size: 1.8rem;}
+}
+
+/* Tablet e laptop piccoli */
+@media (max-width: 1024px) {
+  h1 { font-size: 4rem;}
+  h2 { font-size: 3rem;}
+  h3 { font-size: 2.4rem;}
+  p { font-size: 1.6rem;}
+
+  .chi-siamo-e-servizi-aggiuntivi, .chi-siamo, .servizi-aggiuntivi {
+    flex-direction: column;
+    row-gap: 2rem;
+    align-items: stretch;
+  }
+  header .social-section { display: none;}
+  footer .social-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    row-gap: .4rem; 
+    /* display: block; */
+  }
+  footer {
+    justify-content: space-around;
+  }
+}
+
+/* Tablet verticali e smartphone grandi */
+@media (max-width: 768px) {
+  h1 { font-size: 3.6rem;}
+  h2 { font-size: 2.6rem;}
+  h3 { font-size: 2rem;}
+  p { font-size: 1.4rem;}
+
+  header h1 { display: none;}
+  header, footer, .chi-siamo-e-servizi-aggiuntivi {
+    padding: 2rem;
+  }
+  .i-nostri-prodotti-header, .call-to-action-header {
+    padding: 3rem;
+  } 
+}
+
+/* Smartphone standard */
+@media (max-width: 640px) {
+  h1 { font-size: 3.2rem;}
+  h2 { font-size: 2.2rem;}
+  h3 { font-size: 1.8rem;}
+  p { font-size: 1.2rem;}
+
+  header, footer, .chi-siamo-e-servizi-aggiuntivi {
+    padding: 1.5rem;
+  }
+  header img { width: 15rem;}
+  .i-nostri-prodotti-header, .call-to-action-header {
+    padding: 2.5rem;
+  }
+
+}
+
+/* Smartphone piccoli */
+@media (max-width: 475px) {
+  h1 { font-size: 2.8rem;}
+  h2 { font-size: 2rem;}
+  h3 { font-size: 1.6rem;}
+  p { font-size: 1rem;}
+
+  header, footer, .chi-siamo-e-servizi-aggiuntivi {
+    padding: 1rem;
+  }
+  header img { width: 10rem;}
+  .i-nostri-prodotti-header, .call-to-action-header {
+    padding: 2rem;
+  } 
+}

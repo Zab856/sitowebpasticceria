@@ -37,7 +37,7 @@ document.addEventListener('DOMContentLoaded', () => {
     clearInterval(autoPlayInterval);
   }
 
-  // Attiva solo sopra i 768px
+  // Attiva slider con autoplay solo su desktop
   if (window.innerWidth > 768) {
     nextBtn.addEventListener('click', nextSlide);
     prevBtn.addEventListener('click', prevSlide);
@@ -52,5 +52,8 @@ document.addEventListener('DOMContentLoaded', () => {
         updateSliderPosition();
       }
     });
+  } else {
+    // Su mobile: forza inizio scroll orizzontale
+    track.scrollLeft = 0;
   }
 });

@@ -60,7 +60,7 @@ header {
 header h1 { color: var(--clr-sfondoNeutro);}
 header img {
   height: auto;
-  width: 20rem;
+  width: 24rem;
 }
 .social-section {
   display: flex;
@@ -361,7 +361,7 @@ footer p { color: var(--clr-sfondoNeutro);}
   header, footer, .chi-siamo-e-servizi-aggiuntivi {
     padding: 1.5rem;
   }
-  header img { width: 20rem;}
+  header img { width: 22rem;}
 
   .i-nostri-prodotti-header, .call-to-action-header {
     padding: 2.5rem;
@@ -380,7 +380,7 @@ footer p { color: var(--clr-sfondoNeutro);}
   header, footer, .chi-siamo-e-servizi-aggiuntivi {
     padding: 1rem;
   }
-  header img { width: 15rem;}
+  header img { width: 18rem;}
   .i-nostri-prodotti-header, .call-to-action-header {
     padding: 2rem;
   }

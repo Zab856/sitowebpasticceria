@@ -29,11 +29,6 @@ document.addEventListener('DOMContentLoaded', () => {
     updateSliderPosition();
   }
 
-  function goToSlide(index) {
-    currentIndex = index;
-    updateSliderPosition();
-  }
-
   function startAutoPlay() {
     autoPlayInterval = setInterval(nextSlide, 10000); // 10 secondi
   }
@@ -42,12 +37,20 @@ document.addEventListener('DOMContentLoaded', () => {
     clearInterval(autoPlayInterval);
   }
 
-  nextBtn.addEventListener('click', nextSlide);
-  prevBtn.addEventListener('click', prevSlide);
-  track.addEventListener('mouseenter', stopAutoPlay);
-  track.addEventListener('mouseleave', startAutoPlay);
-  window.addEventListener('resize', updateSliderPosition);
+  // Attiva solo sopra i 768px
+  if (window.innerWidth > 768) {
+    nextBtn.addEventListener('click', nextSlide);
+    prevBtn.addEventListener('click', prevSlide);
+    track.addEventListener('mouseenter', stopAutoPlay);
+    track.addEventListener('mouseleave', startAutoPlay);
 
-  updateSliderPosition();
-  startAutoPlay();
+    updateSliderPosition();
+    startAutoPlay();
+
+    window.addEventListener('resize', () => {
+      if (window.innerWidth > 768) {
+        updateSliderPosition();
+      }
+    });
+  }
 });

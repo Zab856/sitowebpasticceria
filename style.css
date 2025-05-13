@@ -94,6 +94,9 @@ header .social-section a .phone { font-size: 3rem;}
   flex-wrap: nowrap;
   gap: 1rem;
   width: fit-content;
+  /* width: 100%; 
+  overflow: hidden;
+  justify-content: center;  */
   margin: 0 auto;
 
   position: relative;
@@ -301,6 +304,20 @@ footer p { color: var(--clr-sfondoNeutro);}
   h3 { font-size: 2rem;}
   p { font-size: 1.4rem;}
 
+  .i-nostri-prodotti-main { /**/
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+  }
+  .slide-track { /**/
+    display: flex;
+    gap: 1rem;
+    width: max-content;
+  }
+  .slide { /**/
+    scroll-snap-align: center;
+    flex-shrink: 0;
+  }
   .slide { padding: 0;}
   .slide img { 
     width: 30rem;

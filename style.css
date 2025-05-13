@@ -251,6 +251,8 @@ footer p { color: var(--clr-sfondoNeutro);}
     width: 50ch;
     padding: 2rem;
   }
+
+  .call-to-action-main { height: 40rem;}
 }
 
 /* Tablet e laptop piccoli */
@@ -272,6 +274,9 @@ footer p { color: var(--clr-sfondoNeutro);}
     row-gap: 2rem;
     align-items: stretch;
   }
+
+  .call-to-action-main { height: 38rem;}
+
   header .social-section { display: none;}
   footer .social-section {
     display: flex;
@@ -298,6 +303,8 @@ footer p { color: var(--clr-sfondoNeutro);}
   }
   .slide-text { display: none;}
 
+  .call-to-action-main { height: 36rem;}
+
   header h1 { display: none;}
   header, footer, .chi-siamo-e-servizi-aggiuntivi {
     padding: 2rem;
@@ -320,6 +327,9 @@ footer p { color: var(--clr-sfondoNeutro);}
     padding: 1.5rem;
   }
   header img { width: 15rem;}
+
+  .call-to-action-main { height: 30rem;}
+
   .i-nostri-prodotti-header, .call-to-action-header {
     padding: 2.5rem;
   }
@@ -335,6 +345,8 @@ footer p { color: var(--clr-sfondoNeutro);}
   p { font-size: 1rem;}
 
   .slide img { width: 25rem;}
+
+  .call-to-action-main { height: 20rem;}
 
   header, footer, .chi-siamo-e-servizi-aggiuntivi {
     padding: 1rem;

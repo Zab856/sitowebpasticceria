@@ -2,7 +2,7 @@
   --clr-primario: rgb(166, 70, 50); /* Terracotta */
   --clr-shadowPrimario: rgba(166, 70, 50, 0.6); /* Terracotta shadow */
 
-  --clr-secondario: rgb(245, 214, 177); /* Light orange */
+  --clr-secondario: rgb(245, 214, 177); /* Light orange - */
   --clr-accentoScuro: rgb(97, 42, 30); /* Marrone bruciato */
 
   --clr-sfondoNeutro: rgb(240, 234, 230); /* Tortora chiaro */
@@ -56,7 +56,7 @@ header {
   justify-content: space-around;
   align-items: center;
 }
-header h1 { color: var(--clr-secondario);}
+header h1 { color: var(--clr-sfondoNeutro);}
 header img {
   height: auto;
   width: 20rem;
@@ -67,10 +67,11 @@ header img {
   align-items: center;
   gap: 1rem;
 }
-header .social-section a img {
-  height: auto;
-  width: 3.3rem;
+header .social-section a ion-icon {
+  font-size: 3.2rem;
+  color: var(--clr-sfondoNeutro);
 }
+header .social-section a .phone { font-size: 3rem;}
 
 
 /* i nostri prodotti */ /* i nostri prodotti */
@@ -129,7 +130,7 @@ header .social-section a img {
   opacity: 0.7;
   border: none;
   border-radius: .4rem;
-  padding: .5rem 0;
+  padding: .8rem 0;
 
   display: flex;
   justify-content: center;
@@ -141,9 +142,9 @@ header .social-section a img {
 }
 .prev-btn { left: 2rem;}
 .next-btn { right: 2rem}
-.prev-btn span, .next-btn span {
+.prev-btn ion-icon, .next-btn ion-icon {
   color: var(--clr-sfondoNeutro);
-  font-size: 3.6rem;
+  font-size: 3.5rem;
 }
 .prev-btn:hover, .next-btn:hover { opacity: 0.8;}
 .prev-btn:active, .next-btn:active { opacity: 1;}
@@ -155,7 +156,7 @@ header .social-section a img {
   padding: 3.5rem;
   text-align: center;
 }
-.call-to-action-header h2 { color: var(--clr-secondario);}
+.call-to-action-header h2 { color: var(--clr-sfondoNeutro);}
 .call-to-action-main {
   height: 42rem;
 }
@@ -222,15 +223,16 @@ footer {
   align-items: center;
 }
 footer .social-section { display: none;}
-footer .social-section a img {
-  height: auto;
-  width: 2.5rem;
+footer .social-section a ion-icon {
+  font-size: 3.2rem;
+  color: var(--clr-sfondoNeutro);
 }
+footer .social-section a .phone { font-size: 3rem;}
 footer h1 {
-  color: var(--clr-secondario);
+  color: var(--clr-sfondoNeutro);
   font-style: italic;
 }
-footer p { color: var(--clr-secondario);}
+footer p { color: var(--clr-sfondoNeutro);}
 
 
 /* - layout responsive - */ /* - layout responsive - */
@@ -241,6 +243,13 @@ footer p { color: var(--clr-secondario);}
   h2 { font-size: 3.4rem;}
   h3 { font-size: 2.6rem;}
   p { font-size: 1.8rem;}
+
+  .slide { padding: 2rem;}
+  .slide img { width: 40rem;}
+  .slide-text {
+    width: 50ch;
+    padding: 2rem;
+  }
 }
 
 /* Tablet e laptop piccoli */
@@ -249,6 +258,13 @@ footer p { color: var(--clr-secondario);}
   h2 { font-size: 3rem;}
   h3 { font-size: 2.4rem;}
   p { font-size: 1.6rem;}
+
+  .slide { padding: 1.5rem;}
+  .slide img { width: 30rem;}
+  .slide-text {
+    width: 40ch;
+    padding: 2rem;
+  }
 
   .chi-siamo-e-servizi-aggiuntivi, .chi-siamo, .servizi-aggiuntivi {
     flex-direction: column;
@@ -275,6 +291,13 @@ footer p { color: var(--clr-secondario);}
   h3 { font-size: 2rem;}
   p { font-size: 1.4rem;}
 
+  .slide { padding: 0;}
+  .slide img { 
+    width: 25rem;
+    box-shadow: 0;
+  }
+  .slide-text { display: none;}
+
   header h1 { display: none;}
   header, footer, .chi-siamo-e-servizi-aggiuntivi {
     padding: 2rem;
@@ -290,6 +313,8 @@ footer p { color: var(--clr-secondario);}
   h2 { font-size: 2.2rem;}
   h3 { font-size: 1.8rem;}
   p { font-size: 1.2rem;}
+
+  .slide img { width: 20rem;}
 
   header, footer, .chi-siamo-e-servizi-aggiuntivi {
     padding: 1.5rem;
@@ -307,6 +332,8 @@ footer p { color: var(--clr-secondario);}
   h2 { font-size: 2rem;}
   h3 { font-size: 1.6rem;}
   p { font-size: 1rem;}
+
+  .slide img { width: 15rem;}
 
   header, footer, .chi-siamo-e-servizi-aggiuntivi {
     padding: 1rem;

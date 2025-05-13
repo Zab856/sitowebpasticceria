@@ -39,7 +39,7 @@ img, picture, video, canvas, svg {
 ::-webkit-scrollbar-track {
   background-color: var(--clr-sfondoNeutro);
 }
-
+/* .i-nostri-prodotti-main ::-webkit-scrollbar-thumb, .i-nostri-prodotti-main ::-webkit-scrollbar-track { background: var(--clr-sfondoNeutro);} */
 
 /* font sizes */
 h1 { font-size: 5rem;}
@@ -291,57 +291,12 @@ footer p { color: var(--clr-sfondoNeutro);}
   h3 { font-size: 2rem;}
   p { font-size: 1.4rem;}
 
-  /* .slide { padding: 0;}
+  .slide { padding: 0;}
   .slide img {
     width: 30rem;
     box-shadow: 0;
-  } */
+  }
   .slide-text { display: none;}
-  /* .slide-track { overflow:-moz-hidden-unscrollable;} */
-  /* .slide-track {
-    width: 100%;
-    overflow-x: hidden;
-    display: flex;
-    flex-wrap: nowrap;
-    gap: 1rem;
-    justify-content: center;
-  }
-  .slide {
-    flex-shrink: 0;
-    max-width: 100%;
-    box-sizing: border-box;
-    margin: 0 auto;
-  } */
-  .prev-btn, .next-btn { display: none;}
-
-
-  /* Swipabile a mano */
-  .i-nostri-prodotti-main {
-    overflow-x: auto;
-    scroll-snap-type: x mandatory;
-    -webkit-overflow-scrolling: touch;
-  }
-  .i-nostri-prodotti-main ::-webkit-scrollbar-thumb, .i-nostri-prodotti-main ::-webkit-scrollbar-track { background: var(--clr-sfondoNeutro);}
-  .slide-track {
-    width: max-content;
-    display: flex;
-    gap: 1rem;
-    scroll-behavior: smooth;
-  }
-  .slide {
-    flex-shrink: 0;
-    scroll-snap-align: center;
-    margin: 0 auto;
-    max-width: 90vw;
-    box-sizing: border-box;
-  }
-  .slide img {
-    width: 100%;
-    max-width: 100%;
-    height: auto;
-  }
-  /**/
-
 
   header h1 { display: none;}
   header, footer, .chi-siamo-e-servizi-aggiuntivi {

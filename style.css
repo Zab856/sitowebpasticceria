@@ -296,30 +296,41 @@ footer p { color: var(--clr-sfondoNeutro);}
   h3 { font-size: 2rem;}
   p { font-size: 1.4rem;}
 
-  .slide { padding: 0;}
+  .slide {
+    padding: 0;
+    background-color: var(--clr-sfondoNeutro);
+    /* box-shadow: none; */
+    margin-bottom: 0;
+    flex: 0 0 80%;
+    scroll-snap-align: center;
+  }
   .slide img {
     width: 30rem;
-    box-shadow: 0;
+    box-shadow: none;
   }
-  .slide-text { display: none;}
-  .prev-btn, .next-btn { display: none;}
+  .slide-text { display: none; }
+  .prev-btn, .next-btn { display: none;  }
   .slide-track {
     overflow-x: auto;
     scroll-snap-type: x mandatory;
     -webkit-overflow-scrolling: touch;
+    background-color: var(--clr-sfondoNeutro);
+    -ms-overflow-style: none;     /* IE e Edge */
+    scrollbar-width: none;        /* Firefox */
   }
-  .slide {
-    flex: 0 0 80%;
-    scroll-snap-align: center;
-  }
+  .slide-track::-webkit-scrollbar { display: none;}
+  /* .i-nostri-prodotti-main { background-color: var(--clr-sfondoNeutro);} */
 
   .call-to-action-main { height: 38rem;}
 
   header h1 { display: none;}
+
   header, footer, .chi-siamo-e-servizi-aggiuntivi {
     padding: 2rem;
   }
-  .i-nostri-prodotti-header, .call-to-action-header {
+
+  .i-nostri-prodotti-header,
+  .call-to-action-header {
     padding: 3rem;
   }
 }

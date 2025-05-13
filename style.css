@@ -94,9 +94,6 @@ header .social-section a .phone { font-size: 3rem;}
   flex-wrap: nowrap;
   gap: 1rem;
   width: fit-content;
-  /* width: 100%; 
-  overflow: hidden;
-  justify-content: center;  */
   margin: 0 auto;
 
   position: relative;
@@ -141,7 +138,7 @@ header .social-section a .phone { font-size: 3rem;}
   position: absolute;
   z-index: 99;
   top: 40%;
-  /* transform: translateY(-50%); */
+  /* transform: translateY(-50%); ? */
 }
 .prev-btn { left: 2rem;}
 .next-btn { right: 2rem}
@@ -279,21 +276,10 @@ footer p { color: var(--clr-sfondoNeutro);}
     display: flex;
     flex-direction: column;
     justify-content: center;
-    row-gap: .4rem; 
-    /* display: block; */
+    row-gap: .4rem;
   }
   footer {
     justify-content: space-around;
-  }
-
-  .i-nostri-prodotti-main { /**/
-    overflow-x: hidden;
-  }
-  .slide-track { /**/
-    width: 100%;
-    max-width: 100%;
-    overflow-x: hidden;
-    box-sizing: border-box;
   }
 }
 
@@ -304,42 +290,13 @@ footer p { color: var(--clr-sfondoNeutro);}
   h3 { font-size: 2rem;}
   p { font-size: 1.4rem;}
 
-  .i-nostri-prodotti-main { /**/
-    overflow-x: auto;
-    scroll-snap-type: x mandatory;
-    -webkit-overflow-scrolling: touch;
-  }
-  .slide-track { /**/
-    display: flex;
-    gap: 1rem;
-    width: max-content;
-  }
-  .slide { /**/
-    scroll-snap-align: center;
-    flex-shrink: 0;
-  }
   .slide { padding: 0;}
-  .slide img { 
+  .slide img {
     width: 30rem;
     box-shadow: 0;
   }
-  .slide { /**/
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    
-    margin: 0 auto;
-    max-width: 100%;
-    box-sizing: border-box;
-  }
-  .slide-text { /**/
-    display: none;
-    width: 0;
-    height: 0;
-    padding: 0;
-    margin: 0;
-    overflow: hidden;
-  }
+  .slide-text { display: none;}
+  .slide-track { overflow:-moz-hidden-unscrollable;}
 
   header h1 { display: none;}
   header, footer, .chi-siamo-e-servizi-aggiuntivi {
@@ -348,8 +305,6 @@ footer p { color: var(--clr-sfondoNeutro);}
   .i-nostri-prodotti-header, .call-to-action-header {
     padding: 3rem;
   }
-
-
 }
 
 /* Smartphone standard */
@@ -368,7 +323,6 @@ footer p { color: var(--clr-sfondoNeutro);}
   .i-nostri-prodotti-header, .call-to-action-header {
     padding: 2.5rem;
   }
-
 }
 
 /* Smartphone piccoli */
@@ -386,5 +340,5 @@ footer p { color: var(--clr-sfondoNeutro);}
   header img { width: 10rem;}
   .i-nostri-prodotti-header, .call-to-action-header {
     padding: 2rem;
-  } 
+  }
 }

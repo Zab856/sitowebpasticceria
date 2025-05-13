@@ -46,8 +46,10 @@ document.addEventListener('DOMContentLoaded', () => {
     updateSliderPosition();
     startAutoPlay();
   } else {
-    // Mobile: scroll to beginning, remove transform
-    track.scrollLeft = 0;
+    // Mobile: scroll to beginning after layout is ready
+    requestAnimationFrame(() => {
+      track.scrollLeft = 0;
+    });
     track.style.transform = 'none';
   }
 
@@ -57,8 +59,9 @@ document.addEventListener('DOMContentLoaded', () => {
     if (window.innerWidth > 768) {
       updateSliderPosition();
     } else {
-      // Reset slider position and remove transform
-      track.scrollLeft = 0;
+      requestAnimationFrame(() => {
+        track.scrollLeft = 0;
+      });
       track.style.transform = 'none';
     }
   });

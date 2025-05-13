@@ -1,7 +1,5 @@
 console.log('Hi!👽👍');
 
-// Slider // Slider // Slider // Slider
-
 document.addEventListener('DOMContentLoaded', () => {
   const track = document.querySelector('.slide-track');
   const slides = Array.from(document.querySelectorAll('.slide'));
@@ -12,7 +10,7 @@ document.addEventListener('DOMContentLoaded', () => {
   let autoPlayInterval;
 
   function updateSliderPosition() {
-    const slideWidth = slides[0].offsetWidth + 16; // larghezza + gap
+    const slideWidth = slides[0].offsetWidth + 16; // slide + gap
     const centerOffset = (track.parentElement.offsetWidth / 2) - (slideWidth / 2);
     const translateX = -(slideWidth * currentIndex) + centerOffset;
     track.style.transform = `translateX(${translateX}px)`;
@@ -30,14 +28,15 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   function startAutoPlay() {
-    autoPlayInterval = setInterval(nextSlide, 10000); // 10 secondi
+    autoPlayInterval = setInterval(nextSlide, 10000);
   }
 
   function stopAutoPlay() {
     clearInterval(autoPlayInterval);
   }
 
-  // Attiva slider con autoplay solo su desktop
+  console.log("Viewport width:", window.innerWidth);
+
   if (window.innerWidth > 768) {
     nextBtn.addEventListener('click', nextSlide);
     prevBtn.addEventListener('click', prevSlide);
@@ -46,14 +45,21 @@ document.addEventListener('DOMContentLoaded', () => {
 
     updateSliderPosition();
     startAutoPlay();
-
-    window.addEventListener('resize', () => {
-      if (window.innerWidth > 768) {
-        updateSliderPosition();
-      }
-    });
   } else {
-    // Su mobile: forza inizio scroll orizzontale
+    // Mobile: scroll to beginning, remove transform
     track.scrollLeft = 0;
+    track.style.transform = 'none';
   }
+
+  window.addEventListener('resize', () => {
+    console.log("Resized to:", window.innerWidth);
+
+    if (window.innerWidth > 768) {
+      updateSliderPosition();
+    } else {
+      // Reset slider position and remove transform
+      track.scrollLeft = 0;
+      track.style.transform = 'none';
+    }
+  });
 });

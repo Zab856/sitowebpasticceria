@@ -299,12 +299,12 @@ footer p { color: var(--clr-sfondoNeutro);}
   .slide {
     padding: 0;
     margin: 0;
-    background-color: var(--clr-sfondoNeutro);
     background: none;
 
     flex: 0 0 auto;
     scroll-snap-align: center;
-    display: block;
+    display: flex;
+    justify-content: center;
   }
   .slide img {
     width: 30rem;
@@ -324,9 +324,13 @@ footer p { color: var(--clr-sfondoNeutro);}
     background-color: var(--clr-sfondoNeutro);
     -ms-overflow-style: none;     /* IE e Edge */
     scrollbar-width: none;        /* Firefox */
+
+    width: 100%;
+    padding-left: 1rem;
   }
   .slide-track::-webkit-scrollbar { display: none;}
   /* .i-nostri-prodotti-main { background-color: var(--clr-sfondoNeutro);} */
+  .i-nostri-prodotti-main { overflow: hidden;}
 
   .call-to-action-main { height: 38rem;}
 

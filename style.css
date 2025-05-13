@@ -297,21 +297,21 @@ footer p { color: var(--clr-sfondoNeutro);}
   p { font-size: 1.4rem;}
 
   .slide {
+    padding: 0;
     margin: 0;
+    background-color: var(--clr-sfondoNeutro);
+    background: none;
+
     flex: 0 0 auto;
     scroll-snap-align: center;
     display: block;
-    padding: 0;
-    background-color: var(--clr-sfondoNeutro);
-    /* box-shadow: none; */
   }
   .slide img {
-    /* width: 30rem; */
+    width: 30rem;
+    height: auto;
+
     box-shadow: none;
     display: block;
-    width: auto;
-    height: auto;
-    max-width: 100%;
   }
   .slide-text { display: none; }
   .prev-btn, .next-btn { display: none;}

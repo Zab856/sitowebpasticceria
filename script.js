@@ -45,12 +45,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
     updateSliderPosition();
     startAutoPlay();
-  } else {
-    // Mobile: scroll to beginning after layout is ready
-    requestAnimationFrame(() => {
-      track.scrollLeft = 0;
-    });
-    track.style.transform = 'none';
   }
 
   window.addEventListener('resize', () => {
@@ -59,10 +53,16 @@ document.addEventListener('DOMContentLoaded', () => {
     if (window.innerWidth > 768) {
       updateSliderPosition();
     } else {
-      requestAnimationFrame(() => {
-        track.scrollLeft = 0;
-      });
       track.style.transform = 'none';
+      track.scrollLeft = 0;
     }
   });
+});
+
+// Fix per mobile: assicurati che scrollLeft sia 0 dopo che tutto è caricato
+window.addEventListener('load', () => {
+  const track = document.querySelector('.slide-track');
+  if (window.innerWidth <= 768 && track) {
+    track.scrollLeft = 0;
+  }
 });

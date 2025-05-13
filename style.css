@@ -297,20 +297,27 @@ footer p { color: var(--clr-sfondoNeutro);}
   p { font-size: 1.4rem;}
 
   .slide {
+    margin: 0;
+    flex: 0 0 auto;
+    scroll-snap-align: center;
+    display: block;
     padding: 0;
     background-color: var(--clr-sfondoNeutro);
     /* box-shadow: none; */
-    margin-bottom: 0;
-    flex: 0 0 80%;
-    scroll-snap-align: center;
   }
   .slide img {
-    width: 30rem;
+    /* width: 30rem; */
     box-shadow: none;
+    display: block;
+    width: auto;
+    height: auto;
+    max-width: 100%;
   }
   .slide-text { display: none; }
-  .prev-btn, .next-btn { display: none;  }
+  .prev-btn, .next-btn { display: none;}
   .slide-track {
+    display: flex;
+    gap: 1rem;
     overflow-x: auto;
     scroll-snap-type: x mandatory;
     -webkit-overflow-scrolling: touch;
@@ -342,7 +349,7 @@ footer p { color: var(--clr-sfondoNeutro);}
   h3 { font-size: 1.8rem;}
   p { font-size: 1.2rem;}
 
-  .slide img { width: 20rem;}
+  /* .slide img { width: 20rem;} */
 
   header, footer, .chi-siamo-e-servizi-aggiuntivi {
     padding: 1.5rem;

@@ -260,7 +260,7 @@ footer p { color: var(--clr-sfondoNeutro);}
   p { font-size: 1.6rem;}
 
   .slide { padding: 1.5rem;}
-  .slide img { width: 30rem;}
+  .slide img { width: 35rem;}
   .slide-text {
     width: 40ch;
     padding: 2rem;
@@ -282,6 +282,16 @@ footer p { color: var(--clr-sfondoNeutro);}
   footer {
     justify-content: space-around;
   }
+
+  .i-nostri-prodotti-main { /**/
+    overflow-x: hidden;
+  }
+  .slide-track { /**/
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+    box-sizing: border-box;
+  }
 }
 
 /* Tablet verticali e smartphone grandi */
@@ -293,7 +303,7 @@ footer p { color: var(--clr-sfondoNeutro);}
 
   .slide { padding: 0;}
   .slide img { 
-    width: 25rem;
+    width: 30rem;
     box-shadow: 0;
   }
   .slide-text { display: none;}
@@ -304,7 +314,13 @@ footer p { color: var(--clr-sfondoNeutro);}
   }
   .i-nostri-prodotti-header, .call-to-action-header {
     padding: 3rem;
-  } 
+  }
+
+  .slide { /**/
+    margin: 0 auto 2rem;
+    max-width: 100%;
+    box-sizing: border-box;
+  }
 }
 
 /* Smartphone standard */
@@ -314,7 +330,7 @@ footer p { color: var(--clr-sfondoNeutro);}
   h3 { font-size: 1.8rem;}
   p { font-size: 1.2rem;}
 
-  .slide img { width: 20rem;}
+  .slide img { width: 25rem;}
 
   header, footer, .chi-siamo-e-servizi-aggiuntivi {
     padding: 1.5rem;
@@ -333,7 +349,7 @@ footer p { color: var(--clr-sfondoNeutro);}
   h3 { font-size: 1.6rem;}
   p { font-size: 1rem;}
 
-  .slide img { width: 15rem;}
+  .slide img { width: 20rem;}
 
   header, footer, .chi-siamo-e-servizi-aggiuntivi {
     padding: 1rem;

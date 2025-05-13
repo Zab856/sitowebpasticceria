@@ -326,11 +326,14 @@ footer p { color: var(--clr-sfondoNeutro);}
     scrollbar-width: none;        /* Firefox */
 
     width: 100%;
-    padding-left: 1rem;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
   }
   .slide-track::-webkit-scrollbar { display: none;}
-  /* .i-nostri-prodotti-main { background-color: var(--clr-sfondoNeutro);} */
-  .i-nostri-prodotti-main { overflow: hidden;}
+  .i-nostri-prodotti-main { 
+    overflow: hidden;
+    margin-bottom: .5rem
+  }
 
   .call-to-action-main { height: 38rem;}
 

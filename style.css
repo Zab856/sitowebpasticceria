@@ -368,6 +368,8 @@ footer p { color: var(--clr-sfondoNeutro);}
   .i-nostri-prodotti-header, .call-to-action-header {
     padding: 2.5rem;
   }
+  footer .social-section a ion-icon { font-size: 3rem;}
+  footer .social-section a .phone { font-size: 2.8rem;}
 }
 
 /* Smartphone piccoli */
@@ -386,4 +388,6 @@ footer p { color: var(--clr-sfondoNeutro);}
   .i-nostri-prodotti-header, .call-to-action-header {
     padding: 2rem;
   }
+  footer .social-section a ion-icon { font-size: 2.8rem;}
+  footer .social-section a .phone { font-size: 2.6rem;}
 }

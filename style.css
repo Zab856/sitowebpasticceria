@@ -302,7 +302,7 @@ footer p { color: var(--clr-sfondoNeutro);}
     box-shadow: 0;
   }
   .slide-text { display: none;}
-  .prev-btn, .next-btn { display: none;} /**/
+  .prev-btn, .next-btn { display: none;}
   .slide-track {
     overflow-x: auto;
     scroll-snap-type: x mandatory;
@@ -311,7 +311,7 @@ footer p { color: var(--clr-sfondoNeutro);}
   .slide {
     flex: 0 0 80%;
     scroll-snap-align: center;
-  }/**/
+  }
 
   .call-to-action-main { height: 38rem;}
 
@@ -355,7 +355,7 @@ footer p { color: var(--clr-sfondoNeutro);}
   header, footer, .chi-siamo-e-servizi-aggiuntivi {
     padding: 1rem;
   }
-  header img { width: 10rem;}
+  header img { width: 15rem;}
   .i-nostri-prodotti-header, .call-to-action-header {
     padding: 2rem;
   }

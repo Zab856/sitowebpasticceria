@@ -35,8 +35,14 @@ document.addEventListener('DOMContentLoaded', () => {
     clearInterval(autoPlayInterval);
   }
 
-  console.log("Viewport width:", window.innerWidth);
+  function initMobileScrollFix() {
+    // Delay to ensure rendering completed
+    setTimeout(() => {
+      track.scrollLeft = 0;
+    }, 300);
+  }
 
+  // Desktop behavior
   if (window.innerWidth > 768) {
     nextBtn.addEventListener('click', nextSlide);
     prevBtn.addEventListener('click', prevSlide);
@@ -45,24 +51,17 @@ document.addEventListener('DOMContentLoaded', () => {
 
     updateSliderPosition();
     startAutoPlay();
+  } else {
+    initMobileScrollFix();
+    track.style.transform = 'none';
   }
 
   window.addEventListener('resize', () => {
-    console.log("Resized to:", window.innerWidth);
-
     if (window.innerWidth > 768) {
       updateSliderPosition();
     } else {
       track.style.transform = 'none';
-      track.scrollLeft = 0;
+      initMobileScrollFix();
     }
   });
-});
-
-// Fix per mobile: assicurati che scrollLeft sia 0 dopo che tutto è caricato
-window.addEventListener('load', () => {
-  const track = document.querySelector('.slide-track');
-  if (window.innerWidth <= 768 && track) {
-    track.scrollLeft = 0;
-  }
 });

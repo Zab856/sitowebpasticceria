@@ -37,7 +37,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
   function initMobileScrollFix() {
     setTimeout(() => {
-      track.scrollLeft = 0;
+      const firstSlide = track.querySelector('.slide');
+      if (firstSlide) {
+        firstSlide.scrollIntoView({ behavior: 'auto', inline: 'start' });
+      }
     }, 300);
   }
 

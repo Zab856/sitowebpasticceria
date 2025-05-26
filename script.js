@@ -36,13 +36,12 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   function initMobileScrollFix() {
-    // Delay to ensure rendering completed
     setTimeout(() => {
       track.scrollLeft = 0;
     }, 300);
   }
 
-  // Desktop behavior
+  // Inizializzazione all'apertura
   if (window.innerWidth > 768) {
     nextBtn.addEventListener('click', nextSlide);
     prevBtn.addEventListener('click', prevSlide);
@@ -52,16 +51,19 @@ document.addEventListener('DOMContentLoaded', () => {
     updateSliderPosition();
     startAutoPlay();
   } else {
+    currentIndex = 0;
     initMobileScrollFix();
     track.style.transform = 'none';
   }
 
+  // Gestione del resize dinamico
   window.addEventListener('resize', () => {
     if (window.innerWidth > 768) {
       updateSliderPosition();
     } else {
-      track.style.transform = 'none';
+      currentIndex = 0;
       initMobileScrollFix();
+      track.style.transform = 'none';
     }
   });
 });

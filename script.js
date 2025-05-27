@@ -37,12 +37,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
   function initMobileScrollFix() {
     setTimeout(() => {
-      const firstSlide = track.querySelector('.slide');
-      if (firstSlide) {
-        firstSlide.scrollIntoView({ behavior: 'auto', inline: 'start' });
-      }
+      track.scrollLeft = 0;
     }, 300);
   }
+
 
   // Inizializzazione all'apertura
   if (window.innerWidth > 768) {
